@@ -1,0 +1,122 @@
+def dodawanie(a, b):
+    return a + b
+
+def odejmowanie(a, b):
+    return a - b
+
+def mnozenie(a, b):
+    return a * b
+
+def dzielenie(a, b):
+    if b != 0:
+        return a / b
+    else:
+        return "Błąd: Nie można dzielić przez zero!"
+
+def dzielenie_calkowite(a, b):
+    if b != 0:
+        return a // b
+    else:
+        return "Błąd: Nie można dzielić przez zero!"
+
+def reszta_z_dzielenia(a, b):
+    if b != 0:
+        return a % b
+    else:
+        return "Błąd: Nie można dzielić przez zero!"
+
+def potegowanie(a, b):
+    return a ** b
+
+def pierwiastek_kwadratowy(a):
+    return a ** 0.5
+
+def pierwiastek_dowolny(a, stopien):
+    return a ** (1 / stopien)
+
+def kalkulator():
+    print("Prosty kalkulator")
+    print("Dostępne operacje:")
+    print("1. Dodawanie")
+    print("2. Odejmowanie")
+    print("3. Mnożenie")
+    print("4. Dzielenie")
+    print("5. Dzielenie całkowite")
+    print("6. Reszta z dzielenia")
+    print("7. Potęgowanie")
+    print("8. Pierwiastek kwadratowy")
+    print("9. Pierwiastek dowolnego stopnia")
+    print("10. Wyjście")
+
+    while True:
+        wybor = input("Wybierz operację (1/2/3/4/5/6/7/8/9/10): ")
+
+        if wybor == '10':
+            print("Dziękujemy za skorzystanie z kalkulatora!")
+            break
+
+        if wybor not in ('1', '2', '3', '4', '5', '6', '7', '8', '9'):
+            print("Błąd: Wybierz poprawny numer operacji!")
+            continue
+
+        try:
+            if wybor in ('1', '2', '3', '4', '5', '6', '7'):
+                liczba1 = float(input("Podaj pierwszą liczbę: "))
+                liczba2 = float(input("Podaj drugą liczbę: "))
+            else:
+                liczba1 = float(input("Podaj liczbę: "))
+        except ValueError:
+            print("Błąd: Wprowadź poprawne liczby!")
+            continue
+
+        if wybor == '1':
+            print("Wynik dodawania:", dodawanie(liczba1, liczba2))
+        elif wybor == '2':
+            print("Wynik odejmowania:", odejmowanie(liczba1, liczba2))
+        elif wybor == '3':
+            print("Wynik mnożenia:", mnozenie(liczba1, liczba2))
+        elif wybor == '4':
+            if liczba2 == 0:
+                print("Błąd: Nie można dzielić przez zero!")
+            else:
+                print("Wynik dzielenia:", dzielenie(liczba1, liczba2))
+        elif wybor == '5':
+            if liczba2 == 0:
+                print("Błąd: Nie można dzielić przez zero!")
+            else:
+                print("Wynik dzielenia całkowitego:", dzielenie_calkowite(liczba1, liczba2))
+        elif wybor == '6':
+            if liczba2 == 0:
+                print("Błąd: Nie można dzielić przez zero!")
+            else:
+                print("Reszta z dzielenia:", reszta_z_dzielenia(liczba1, liczba2))
+        elif wybor == '7':
+            print("Wynik potęgowania:", potegowanie(liczba1, liczba2))
+        elif wybor == '8':
+            print("Wynik pierwiastka kwadratowego:", pierwiastek_kwadratowy(liczba1))
+        elif wybor == '9':
+            stopien = float(input("Podaj stopień pierwiastka: "))
+            print(f"Wynik pierwiastka {stopien}-tego stopnia:", pierwiastek_dowolny(liczba1, stopien))
+
+        print("\n")
+
+if __name__ == "__main__":
+    kalkulator()
+Teraz kalkulator obsługuje operacje obliczania pierwiastka kwadratowego oraz pierwiastka dowolnego stopnia. W przypadku obliczania pierwiastka dowolnego stopnia, użytkownik zostanie poproszony o podanie stopnia pierwiastka. Zaktualizowany kalkulator nadal zawiera prostą walidację danych wejściowych i działa zgodnie z wymaganiami. Możesz go dalej rozwijać i dostosowywać do swoich potrzeb.
+
+
+
+
+User
+Co oznacza float Co daje float w tym programie
+ChatGPT
+W języku Python typ danych "float" (zmiennoprzecinkowy) jest używany do reprezentowania liczb rzeczywistych, czyli liczb zmiennoprzecinkowych, które mogą zawierać miejsca dziesiętne. Wartości float składają się z części całkowitej oraz części dziesiętnej, oddzielonych kropką.
+
+W zaktualizowanym kodzie kalkulatora używamy typu danych "float" dla zmiennych, które przechowują liczby wprowadzone przez użytkownika. Dzięki temu możemy obsługiwać liczby całkowite, jak i liczby zmiennoprzecinkowe. Na przykład:
+
+python
+Copy code
+liczba1 = float(input("Podaj pierwszą liczbę: "))
+W powyższym przykładzie użytkownik jest proszony o wprowadzenie liczby, a funkcja input() zwraca string (łańcuch znaków). Następnie, za pomocą float(), przekształcamy ten łańcuch znaków na liczbę zmiennoprzecinkową i przypisujemy ją do zmiennej liczba1. Podobnie jest robione z drugą liczbą, jeśli użytkownik podał dwie liczby dla operacji, np.
+
+
