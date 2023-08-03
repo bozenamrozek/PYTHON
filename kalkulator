@@ -102,21 +102,3 @@ def kalkulator():
 
 if __name__ == "__main__":
     kalkulator()
-Teraz kalkulator obsługuje operacje obliczania pierwiastka kwadratowego oraz pierwiastka dowolnego stopnia. W przypadku obliczania pierwiastka dowolnego stopnia, użytkownik zostanie poproszony o podanie stopnia pierwiastka. Zaktualizowany kalkulator nadal zawiera prostą walidację danych wejściowych i działa zgodnie z wymaganiami. Możesz go dalej rozwijać i dostosowywać do swoich potrzeb.
-
-
-
-
-User
-Co oznacza float Co daje float w tym programie
-ChatGPT
-W języku Python typ danych "float" (zmiennoprzecinkowy) jest używany do reprezentowania liczb rzeczywistych, czyli liczb zmiennoprzecinkowych, które mogą zawierać miejsca dziesiętne. Wartości float składają się z części całkowitej oraz części dziesiętnej, oddzielonych kropką.
-
-W zaktualizowanym kodzie kalkulatora używamy typu danych "float" dla zmiennych, które przechowują liczby wprowadzone przez użytkownika. Dzięki temu możemy obsługiwać liczby całkowite, jak i liczby zmiennoprzecinkowe. Na przykład:
-
-python
-Copy code
-liczba1 = float(input("Podaj pierwszą liczbę: "))
-W powyższym przykładzie użytkownik jest proszony o wprowadzenie liczby, a funkcja input() zwraca string (łańcuch znaków). Następnie, za pomocą float(), przekształcamy ten łańcuch znaków na liczbę zmiennoprzecinkową i przypisujemy ją do zmiennej liczba1. Podobnie jest robione z drugą liczbą, jeśli użytkownik podał dwie liczby dla operacji, np.
-
-
