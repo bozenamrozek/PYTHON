@@ -1,0 +1,9 @@
+a=5
+b=2
+print('suma=' ,a+b)
+print('suma=' ,a-b)
+print('suma=' ,a/b)
+print('suma=' ,a*b)
+print('suma=' ,a**b)
+print('suma=' ,a%b)
+print('suma=' ,a//b) #dzielenie całkowite
