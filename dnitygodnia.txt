@@ -1,0 +1,17 @@
+def numer_na_dzien_tygodnia(numer):
+    dni_tygodnia = [
+        "poniedziałek", "wtorek", "środa",
+        "czwartek", "piątek", "sobota", "niedziela"
+    ]
+    
+    if numer >= 1 and numer <= 7:
+        return dni_tygodnia[numer - 1]
+    else:
+        return "Nieprawidłowy numer dnia tygodnia"
+
+try:
+    numer_dnia = int(input("Podaj numer dnia tygodnia (1-7): "))
+    dzien_tygodnia = numer_na_dzien_tygodnia(numer_dnia)
+    print(f"Numer {numer_dnia} to {dzien_tygodnia}")
+except ValueError:
+    print("Podano nieprawidłowy numer")
